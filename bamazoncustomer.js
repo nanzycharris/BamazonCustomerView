@@ -1,7 +1,6 @@
 // The app requires 'mysql' and 'inquirer' packages for data input and storage
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-// require("console.table");
 
 // Create your connection to your Bamazon MySQL database
 var connection = mysql.createConnection({
@@ -79,7 +78,7 @@ function askForQuantity(product) {
         var quantity = parseInt(val.quantity);
         // If there aren't enough copies of the chose title, let the user know and re-run showProducts
         if (quantity > product.stock_quantity) {
-            console.log("\nNot enough copies of this title!");
+            console.log("\nNot enough copies of this title!\n");
             showProducts();
         } else {
             // Otherwise run the function buyBook, provide paramenters of product and quantity purchased
@@ -95,7 +94,10 @@ function buyBook(product, quantity) {
         [quantity, product.item_id],
         function (err, res) {
             // Let the user know the purchase was successful and run showProducts again
-            console.log("\nYou successfully bought " + quantity + "copies of " + product.book_title + "!");
+            console.log("\nYou successfully bought " + quantity + " copies of " + product.book_title + "!\n");
+            // Let customer know the price of the product
+            var totalCost = quantity * product.price;
+            console.log("\nYour total cost is " + totalCost + "\n" + "Thank you for your purchase! Come back soon!\n");
             showProducts();
         }
     );
