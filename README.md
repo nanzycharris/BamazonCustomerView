@@ -13,7 +13,7 @@ If not, the app logs the phrase "Not enough copies of this title!", and then pre
 
 However, if the bookstore does have enough of the item, the customer's order will be fulfilled.
 
-The Bamazon SQL database then updates to reflect the remaining quantity. 
+Then our Bamazon SQL database is updated to reflect the remaining quantity. 
 
 Once the update goes through, the customer can see the total cost of their purchase.
 
