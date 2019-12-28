@@ -18,3 +18,4 @@ Then our Bamazon SQL database is updated to reflect the remaining quantity.
 Once the update goes through, the customer can see the total cost of their purchase.
 
 You can watch a demo of how the app works on the following link:
+https://www.youtube.com/watch?v=3O6vHwiP6DA
