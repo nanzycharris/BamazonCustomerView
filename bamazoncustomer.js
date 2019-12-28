@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: " ",
+    password: "pearsley03",
     database: "bamazonDB"
 });
 
@@ -96,8 +96,8 @@ function buyBook(product, quantity) {
             // Let the user know the purchase was successful and run showProducts again
             console.log("\nYou successfully bought " + quantity + " copies of " + product.book_title + "!\n");
             // Let customer know the price of the product
-            var totalCost = quantity * product.price;
-            console.log("\nYour total cost is " + totalCost + "\n" + "Thank you for your purchase! Come back soon!\n");
+            var totalCost = (quantity * product.price) * 1.0825;
+            console.log("\nYour total cost, including taxes, is " + totalCost + "\n" + "Thank you for your purchase! Come back soon!\n");
             showProducts();
         }
     );
