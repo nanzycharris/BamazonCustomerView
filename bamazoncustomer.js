@@ -96,7 +96,7 @@ function buyBook(product, quantity) {
             // Let the user know the purchase was successful and run showProducts again
             console.log("\nYou successfully bought " + quantity + " copies of " + product.book_title + "!\n");
             // Let customer know the price of the product
-            var totalCost = (quantity * product.price) * 1.0825;
+            var totalCost = ((quantity * product.price) * 1.0825).toFixed(2);
             console.log("\nYour total cost, including taxes, is " + totalCost + "\n" + "Thank you for your purchase! Come back soon!\n");
             showProducts();
         }
