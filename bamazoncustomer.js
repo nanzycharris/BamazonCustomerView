@@ -123,3 +123,4 @@ function checkIfExit(choice) {
         process.exit(0);
     }
 }
+
